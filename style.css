@@ -1,24 +1,52 @@
+/* إعدادات عامة للصفحة */
 body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #000000; /* أسود */
+  color: #ffffff;            /* أبيض */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
 }
 
+/* الهيدر */
 header {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
   text-align: center;
+}
+
+/* رؤوس الأقسام */
+h1, h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* الأقسام */
+section {
   margin-bottom: 40px;
 }
 
-h1 {
-  color: #0077cc;
-}
-
-section {
-  margin-bottom: 30px;
-}
-
+/* روابط */
 a {
-  color: #0077cc;
+  color: #ffffff;
   text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+/* قائمة المشاريع */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* تحسين مظهر الإيميل والروابط */
+section p {
+  margin: 8px 0;
 }
