@@ -3,9 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Yassin Elmonair | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome للأيقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      background: #f6f8fb;
+      color: #111;
+    }
+    header {
+      text-align: center;
+      padding: 30px;
+      background: #0b63ff;
+      color: #fff;
+    }
+    header h1 { margin: 0; font-size: 28px; }
+    header p { margin: 6px 0 0; font-size: 16px; }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    section h2 {
+      margin-bottom: 14px;
+      color: #0b63ff;
+    }
+    /* Projects Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(13,30,55,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .card p {
+      margin: 0 0 12px;
+      color: #444;
+      font-size: 14px;
+    }
+    .card a {
+      align-self: flex-start;
+      padding: 8px 12px;
+      background: #0b63ff;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    /* Contact */
+    .contact p {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+    .contact a {
+      color: #0b63ff;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -25,47 +92,52 @@
 
   <section>
     <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Diabetes ML Classifier</strong> – A complete ML pipeline using Python and scikit-learn to classify diabetes risk.  
+    <div class="grid">
+      <div class="card">
+        <h3>Diabetes ML Classifier</h3>
+        <p>ML pipeline using Python and scikit-learn to classify diabetes risk.</p>
         <a href="https://github.com/yacinz17/Diabetes-ML-Classifier" target="_blank">View on GitHub</a>
-      </li>
-      <li>
-        <strong>Obesity Risk Detection</strong> – Predict obesity risk using health & lifestyle data with XGBoost & Random Forest.  
+      </div>
+      <div class="card">
+        <h3>Obesity Risk Detection</h3>
+        <p>Predict obesity risk using XGBoost & Random Forest models.</p>
         <a href="https://github.com/yacinz17/Obesity-Risk-Detection-with-Data-Science" target="_blank">View on GitHub</a>
-      </li>
-      <li>
-        <strong>MRI Visualizer</strong> – Visualize DICOM & NIfTI MRI scans in 2D/3D using Python and Plotly.  
+      </div>
+      <div class="card">
+        <h3>MRI Visualizer</h3>
+        <p>Visualize DICOM & NIfTI MRI scans in 2D/3D using Python & Plotly.</p>
         <a href="https://github.com/yacinz17/MRI-Visualizer" target="_blank">View on GitHub</a>
-      </li>
-      <li>
-        <strong>Heart Disease Prediction</strong> – ML classification model to predict heart disease risk using health metrics.  
-        <a href="https://github.com/yacinz17/Machine-Learning-Model-for-Heart-Disease-Risk-Assessment-">View on GitHub</a>
-      </li>
-      <li>
-        <strong>Medical Imaging Classification</strong> – CNN-based model for disease detection from medical images.  
+      </div>
+      <div class="card">
+        <h3>Heart Disease Prediction</h3>
+        <p>ML model to predict heart disease risk using health metrics.</p>
+        <a href="https://github.com/yacinz17/Machine-Learning-Model-for-Heart-Disease-Risk-Assessment-" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Medical Imaging Classification</h3>
+        <p>CNN-based model for disease detection from medical images.</p>
         <a href="https://github.com/yacinz17/Medical-Imaging-Classification-using-Deep-Learning" target="_blank">View on GitHub</a>
-      </li>
-      <li>
-        <strong>Sales Forecasting</strong> – Predict future sales trends using historical data and regression models.  
+      </div>
+      <div class="card">
+        <h3>Sales Forecasting</h3>
+        <p>Forecast future sales trends using regression models.</p>
         <a href="https://github.com/yacinz17/Sales-Forecasting-using-Machine-Learning" target="_blank">View on GitHub</a>
-      </li>
-      <li>
-        <strong>NLP-Powered Medical Chatbot</strong> – Chatbot using spaCy NER and Hugging Face transformers for medical Q&A.  
+      </div>
+      <div class="card">
+        <h3>NLP-Powered Medical Chatbot</h3>
+        <p>Chatbot using spaCy NER and Hugging Face transformers.</p>
         <a href="https://github.com/yacinz17/NLP-Powered-Chatbot-for-Medical-Consultation" target="_blank">View on GitHub</a>
-      </li>
-    </ul>
+      </div>
+    </div>
   </section>
 
-  <section>
+  <section class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:yassinelmonair@gmail.com">yassinelmonair@gmail.com</a></p>
-    <p>
-      <i class="fab fa-github"></i> GitHub:
+    <p><i class="fab fa-github"></i> GitHub:
       <a href="https://github.com/yacinz17" target="_blank">github.com/yacinz17</a>
     </p>
-    <p>
-      <i class="fab fa-linkedin"></i> LinkedIn:
+    <p><i class="fab fa-linkedin"></i> LinkedIn:
       <a href="https://www.linkedin.com/in/yassin-elmonair-735139379/" target="_blank">
         linkedin.com/in/yassin-elmonair-735139379
       </a>
@@ -73,6 +145,4 @@
   </section>
 </body>
 </html>
-
-
 
