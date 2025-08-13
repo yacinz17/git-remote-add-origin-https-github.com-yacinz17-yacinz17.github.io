@@ -34,18 +34,17 @@
     }
 
     /* Profile Image */
-   .profile-pic {
-    width: 300px; /* بدل 150 */
-    height: 300px; /* بدل 150 */
-    border-radius: 50%; /* تقدر تخليها 15px لو مش عايزها دائرية */
-    border: 5px solid #7f00ff; /* سمك أكبر */
-    margin: 20px auto;
-    display: block;
-    object-fit: cover;
-    box-shadow: 0 0 25px rgba(127,0,255,0.9); /* ظل أوضح */
-    animation: pulse 2.5s infinite;
+    .profile-pic {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 5px solid #7f00ff;
+      margin: 20px auto;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(127,0,255,0.9);
+      animation: pulse 2.5s infinite;
     }
-
 
     section {
       max-width: 1100px;
@@ -67,6 +66,33 @@
       background: #7f00ff;
       margin-top: 5px;
       border-radius: 2px;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .skill {
+      text-align: center;
+      margin: 10px;
+    }
+
+    /* Certificates */
+    .certificates {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .certificate-card {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+      width: 200px;
+      text-align: center;
     }
 
     /* Projects Grid */
@@ -150,12 +176,12 @@
 </head>
 <body>
   <header>
-<img src="images/yass.jpg" alt="Profile Picture" class="profile-pic">
+    <img src="images/yass.jpg" alt="Profile Picture" class="profile-pic">
     <h1>Yassin Elmonair</h1>
     <p>Biomedical Engineer | Data Scientist | AI & ML Specialist</p>
   </header>
 
-  <section>
+  <section id="about">
     <h2>About Me</h2>
     <p>
       I'm a Biomedical Engineer and Data Scientist with a strong focus on Artificial Intelligence and Machine Learning.
@@ -163,6 +189,36 @@
       With hands-on experience in data analysis, machine learning models, and predictive analytics,
       I aim to bridge the gap between engineering, data, and innovation to drive impactful solutions.
     </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <i class="fab fa-python"></i>
+        <p>Python</p>
+      </div>
+      <div class="skill">
+        <i class="fab fa-js"></i>
+        <p>JavaScript</p>
+      </div>
+      <div class="skill">
+        <i class="fas fa-database"></i>
+        <p>SQL</p>
+      </div>
+      <div class="skill">
+        <i class="fas fa-chart-line"></i>
+        <p>Machine Learning</p>
+      </div>
+      <div class="skill">
+        <i class="fas fa-brain"></i>
+        <p>Deep Learning</p>
+      </div>
+      <div class="skill">
+        <i class="fas fa-cloud"></i>
+        <p>AI & Generative AI</p>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -206,6 +262,44 @@
     </div>
   </section>
 
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certificates">
+      <div class="certificate-card">
+        <h3>Machine Learning</h3>
+        <p>Stanford University (Dec 2022)</p>
+      </div>
+      <div class="certificate-card">
+        <h3>Applied Data Science with Python</h3>
+        <p>University of Michigan (Apr 2023)</p>
+      </div>
+      <div class="certificate-card">
+        <h3>IBM Data Science Professional Certificate</h3>
+        <p>IBM (Aug 2024)</p>
+      </div>
+      <div class="certificate-card">
+        <h3>Google Data Analytics</h3>
+        <p>Google (Feb 2024)</p>
+      </div>
+      <div class="certificate-card">
+        <h3>Deep Learning Specialization</h3>
+        <p>deeplearning.ai (Aug 2024)</p>
+      </div>
+      <div class="certificate-card">
+        <h3>Generative AI with LLMs</h3>
+        <p>deeplearning.ai & AWS (Jan 2025)</p>
+      </div>
+      <div class="certificate-card">
+        <h3>AI For Everyone</h3>
+        <p>deeplearning.ai (May 2025)</p>
+      </div>
+      <div class="certificate-card">
+        <h3>AI and ML Summer Camp</h3>
+        <p>Microsoft (Jul 2025)</p>
+      </div>
+    </div>
+  </section>
+
   <section class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:yassinelmonair@gmail.com">yassinelmonair@gmail.com</a></p>
@@ -220,12 +314,6 @@
   </section>
 </body>
 </html>
-
-
-
-
-
-
 
 
 
