@@ -121,7 +121,7 @@
       text-align: center;
       margin: 10px;
       opacity: 0; /* Start hidden */
-      animation: skillFadeIn 0.5s forwards; /* Apply animation */
+      animation: skillFadeIn 0.5s forwards, glow 1.5s infinite alternate; /* Apply animation */
       animation-delay: calc(0.1s * var(--i)); /* Staggered animation */
       transform: translateY(20px); /* Start position */
       transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
@@ -395,7 +395,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:yassinelmonair@gmail.com">yassinelmonair@gmail.com</a></p>
     <p><i class="fab fa-github"></i> GitHub:
@@ -414,7 +414,6 @@
   </section>
 </body>
 </html>
-
 
 
 
