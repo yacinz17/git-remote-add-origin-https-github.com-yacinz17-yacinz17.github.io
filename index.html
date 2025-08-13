@@ -44,6 +44,9 @@
       justify-content: center;
       list-style: none;
       padding: 0;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      padding: 10px;
     }
     .nav-menu li {
       margin: 0 15px;
@@ -56,7 +59,7 @@
       transition: background 0.3s ease, color 0.3s ease;
     }
     .nav-menu a:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.2);
       color: #fff;
     }
 
@@ -121,11 +124,50 @@
       animation: skillFadeIn 0.5s forwards; /* Apply animation */
       animation-delay: calc(0.1s * var(--i)); /* Staggered animation */
       transform: translateY(20px); /* Start position */
+      transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
+    }
+    .skill:hover {
+      transform: scale(1.1); /* Scale up on hover */
+      color: #7f00ff; /* Change color on hover */
     }
     .skill:nth-child(1) { --i: 1; }
     .skill:nth-child(2) { --i: 2; }
     .skill:nth-child(3) { --i: 3; }
     .skill:nth-child(4) { --i: 4; }
+
+    /* Internships */
+    .internship-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .internship-card {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+      width: 300px; /* Width of the card */
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .internship-card:hover {
+      transform: translateY(-5px); /* Lift effect on hover */
+      background: rgba(255, 255, 255, 0.1); /* Change background on hover */
+    }
+
+    .internship-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #c3d1ff;
+    }
+
+    .internship-card p {
+      margin: 5px 0;
+      color: #bbb;
+      font-size: 14px;
+    }
 
     /* Certificates */
     .certificates {
@@ -295,24 +337,23 @@
 
   <section id="internships">
     <h2>Internships</h2>
-    <div class="experience-item">
-      <h3>Machine Learning Intern at ITIDA</h3>
-      <p>Jun 2025 - Jul 2025</p>
-      <p>• Built and optimized ML & DL models, improving accuracy by 8% over baseline.</p>
-      <p>• Applied data preprocessing & feature engineering on datasets of 50k+ records.</p>
-    </div>
-    <div class="experience-item">
-      <h3>Artificial Intelligence Intern at Huawei</h3>
-      <p>May 2025 - Jun 2025</p>
-      <p>• Developed and deployed ML models for real-world case studies.</p>
-      <p>• Implemented solutions in NLP and Computer Vision with accuracy up to 92%.</p>
-    </div>
-    <div class="experience-item">
-      <h3>Machine Learning, Data Science Bootcamp at NTI</h3>
-      <p>May 2023 - Jul 2023</p>
-      <p>• Completed projects using supervised & unsupervised learning.</p>
-      <p>• Built ML models with Python & scikit-learn, improving performance by 10–15%.</p>
-      <p>• Performed EDA & visualizations using Matplotlib & Seaborn.</p>
+    <div class="internship-cards">
+      <div class="internship-card">
+        <h3>Machine Learning Intern at ITIDA</h3>
+        <p>• Built and optimized ML & DL models, improving accuracy by 8% over baseline.</p>
+        <p>• Applied data preprocessing & feature engineering on datasets of 50k+ records.</p>
+      </div>
+      <div class="internship-card">
+        <h3>Artificial Intelligence Intern at Huawei</h3>
+        <p>• Developed and deployed ML models for real-world case studies.</p>
+        <p>• Implemented solutions in NLP and Computer Vision with accuracy up to 92%.</p>
+      </div>
+      <div class="internship-card">
+        <h3>Machine Learning, Data Science Bootcamp at NTI</h3>
+        <p>• Completed projects using supervised & unsupervised learning.</p>
+        <p>• Built ML models with Python & scikit-learn, improving performance by 10–15%.</p>
+        <p>• Performed EDA & visualizations using Matplotlib & Seaborn.</p>
+      </div>
     </div>
   </section>
 
@@ -321,35 +362,35 @@
     <div class="certificates">
       <div class="certificate-card">
         <h3>Machine Learning</h3>
-        <p>Stanford University (Dec 2022)</p>
+        <p>Stanford University</p>
       </div>
       <div class="certificate-card">
         <h3>Applied Data Science with Python</h3>
-        <p>University of Michigan (Apr 2023)</p>
+        <p>University of Michigan</p>
       </div>
       <div class="certificate-card">
         <h3>IBM Data Science Professional Certificate</h3>
-        <p>IBM (Aug 2024)</p>
+        <p>IBM</p>
       </div>
       <div class="certificate-card">
         <h3>Google Data Analytics</h3>
-        <p>Google (Feb 2024)</p>
+        <p>Google</p>
       </div>
       <div class="certificate-card">
         <h3>Deep Learning Specialization</h3>
-        <p>deeplearning.ai (Aug 2024)</p>
+        <p>deeplearning.ai</p>
       </div>
       <div class="certificate-card">
         <h3>Generative AI with LLMs</h3>
-        <p>deeplearning.ai & AWS (Jan 2025)</p>
+        <p>deeplearning.ai & AWS</p>
       </div>
       <div class="certificate-card">
         <h3>AI For Everyone</h3>
-        <p>deeplearning.ai (May 2025)</p>
+        <p>deeplearning.ai</p>
       </div>
       <div class="certificate-card">
         <h3>AI and ML Summer Camp</h3>
-        <p>Microsoft (Jul 2025)</p>
+        <p>Microsoft</p>
       </div>
     </div>
   </section>
@@ -363,6 +404,11 @@
     <p><i class="fab fa-linkedin"></i> LinkedIn:
       <a href="https://www.linkedin.com/in/yassin-elmonair-735139379/" target="_blank">
         linkedin.com/in/yassin-elmonair-735139379
+      </a>
+    </p>
+    <p><i class="fab fa-instagram"></i> Instagram:
+      <a href="https://www.instagram.com/yacinz17?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        yacinz17
       </a>
     </p>
   </section>
