@@ -25,7 +25,7 @@
       margin: 0;
       font-size: 50px;
       letter-spacing: 2px;
-      animation: slideInDown 1.5s ease;
+      animation: glow 1.5s infinite alternate;
     }
     header p {
       margin: 10px 0 0;
@@ -33,17 +33,18 @@
       animation: fadeInUp 2s ease;
     }
 
-    /* Profile Image */
-    .profile-pic {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      border: 5px solid #7f00ff;
-      margin: 20px auto;
-      display: block;
-      object-fit: cover;
-      box-shadow: 0 0 25px rgba(127,0,255,0.9);
-      animation: pulse 2.5s infinite;
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #7f00ff, 0 0 10px #7f00ff, 0 0 15px #7f00ff; }
+      100% { text-shadow: 0 0 20px #7f00ff, 0 0 30px #7f00ff, 0 0 40px #7f00ff; }
     }
 
     section {
@@ -153,30 +154,10 @@
     .contact a:hover {
       text-decoration: underline;
     }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    @keyframes slideInDown {
-      from {transform: translateY(-50px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-    @keyframes pulse {
-      0% {box-shadow: 0 0 15px rgba(127,0,255,0.6);}
-      50% {box-shadow: 0 0 35px rgba(127,0,255,0.9);}
-      100% {box-shadow: 0 0 15px rgba(127,0,255,0.6);}
-    }
   </style>
 </head>
 <body>
   <header>
-    <img src="images/yass.jpg" alt="Profile Picture" class="profile-pic">
     <h1>Yassin Elmonair</h1>
     <p>Biomedical Engineer | Data Scientist | AI & ML Specialist</p>
   </header>
@@ -195,16 +176,8 @@
     <h2>Skills</h2>
     <div class="skills">
       <div class="skill">
-        <i class="fab fa-python"></i>
-        <p>Python</p>
-      </div>
-      <div class="skill">
-        <i class="fab fa-js"></i>
-        <p>JavaScript</p>
-      </div>
-      <div class="skill">
         <i class="fas fa-database"></i>
-        <p>SQL</p>
+        <p>Data Science</p>
       </div>
       <div class="skill">
         <i class="fas fa-chart-line"></i>
@@ -259,6 +232,29 @@
         <p>Chatbot using spaCy NER and Hugging Face transformers.</p>
         <a href="https://github.com/yacinz17/NLP-Powered-Chatbot-for-Medical-Consultation" target="_blank">View on GitHub</a>
       </div>
+    </div>
+  </section>
+
+  <section id="internships">
+    <h2>Internships</h2>
+    <div class="experience-item">
+      <h3>Machine Learning Intern at ITIDA</h3>
+      <p>Jun 2025 - Jul 2025</p>
+      <p>• Built and optimized ML & DL models, improving accuracy by 8% over baseline.</p>
+      <p>• Applied data preprocessing & feature engineering on datasets of 50k+ records.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Artificial Intelligence Intern at Huawei</h3>
+      <p>May 2025 - Jun 2025</p>
+      <p>• Developed and deployed ML models for real-world case studies.</p>
+      <p>• Implemented solutions in NLP and Computer Vision with accuracy up to 92%.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Machine Learning, Data Science Bootcamp at NTI</h3>
+      <p>May 2023 - Jul 2023</p>
+      <p>• Completed projects using supervised & unsupervised learning.</p>
+      <p>• Built ML models with Python & scikit-learn, improving performance by 10–15%.</p>
+      <p>• Performed EDA & visualizations using Matplotlib & Seaborn.</p>
     </div>
   </section>
 
